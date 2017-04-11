@@ -2,20 +2,12 @@
 #Lab 13 redo of lab 12
 #David Henderson
 #Chris Calderon
+#Nicholas Nelson
+#Nathan Muaga
+#Haley Dimapilis
 
-# Lab 13 Note: on lines:430, 438, and 445 calls the keys() method on our dictionaries, which returns a list.
-# In this way we are using lists, even though we aren't really making them by scratch in the app.
-# Also, throughout the code we use a number of tuples that could just as easily have been lists.
+# This is the base code for our final dungeon project
 
-# In this lab, we added on to our strategy game from Lab 11:
-# (a) Add two items that the user must some how get in one room and use in another - 
-#     add some hints to the text so that players are clued in to what/where the useful objects are.  
-#     You can be creative about what objects you add and how the user should use them
-# (b) Add a win condition to your game.  There should be some way for the user to win.  
-#     Maybe they have a task to accomplish or maybe they just need to make it to a specific room with a specific set of items
-# (c) Add a lose condition. There should also be some way for the player to lose your game.  
-# (d) Add a secret room.  There should be some way for a player to access your secret room, but 
-#     it doesn't need to be totally obvious.
 
 class Player:                                  
   def __init__(self, room):                          #Player constructor initializes Player class and its functions
