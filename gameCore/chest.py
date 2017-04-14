@@ -1,4 +1,4 @@
-from . import *
+from media import *
 class Chest:
     def __init__(self, num):  # Chest constructor initializes Chest class and its functions
         self.number = num

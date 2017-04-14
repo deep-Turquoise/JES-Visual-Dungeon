@@ -1,4 +1,9 @@
+from media import *
 from room import *
+from key import *
+from player import *
+from chest import *
+
 class Game:
     def __init__(self):  # Game constructor initializes Game class and its functions
         # Make rooms
