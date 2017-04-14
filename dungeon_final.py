@@ -12,16 +12,17 @@ setMediaFolder(pickAFolder())
 #This is just to deal with JES oddities, so our code can find the rest of our modules
 sys.path.append(getMediaPath())
 
+
 from gameCore import *
 
 
-def main():                                                                        #this function prompts the player upon initialization of the game
-      myText = Text()
-      myText.intro_Outputs()
-      myText.help()
-      printNow("We are having you start off at the Foyer")
-      printNow("The door suddenly locks behind you. You must now find a way out.")
-      Run()
+def main():
+  myText = Text()                                         #this function prompts the player upon initialization of the game
+  myText.intro_Outputs()
+  myText.help()
+  printNow("We are having you start off at the Foyer")
+  printNow("The door suddenly locks behind you. You must now find a way out.")
+  Run()
 
 
 

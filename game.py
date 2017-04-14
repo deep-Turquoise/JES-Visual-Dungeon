@@ -1,4 +1,3 @@
-from media import *
 from room import *
 class Game:
     def __init__(self):  # Game constructor initializes Game class and its functions

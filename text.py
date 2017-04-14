@@ -1,4 +1,3 @@
-from media import *
 class Text():
     def __init__(self):
         None
@@ -22,5 +21,4 @@ class Text():
       go <direction>  -  To move to a different room. e.g. go North
       search <location> - Search a room or bookcase etc. e.g. search Bookcase
       take <item> - Take an item e.g. take key
-      unlock <direction> - Unlock the door in the specified direction e.g. unlock west
-      """)
+      unlock <direction> - Unlock the door in the specified direction e.g. unlock w

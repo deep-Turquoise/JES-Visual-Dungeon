@@ -1,4 +1,3 @@
-from media import *
 from game import *
 class Run:
     # Run constructor below initializes Run class and its functions

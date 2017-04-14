@@ -1,4 +1,3 @@
-from media import *
 class Player:
     def __init__(self, room):  # Player constructor initializes Player class and its functions
         self.item = None
