@@ -12,14 +12,7 @@ setMediaFolder(pickAFolder())
 #This is just to deal with JES oddities, so our code can find the rest of our modules
 sys.path.append(getMediaPath())
 
-from game import *
-from room import *
-from image import *
-from player import *
-from run import *
-from text import *
-from chest import *
-from key import *
+from gameCore import *
 
 
 def main():                                                                        #this function prompts the player upon initialization of the game
