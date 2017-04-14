@@ -23,11 +23,12 @@ from key import *
 
 
 def main():                                                                        #this function prompts the player upon initialization of the game
-      intro_Outputs()
-      help()
+      myText = Text()
+      myText.intro_Outputs()
+      myText.help()
       printNow("We are having you start off at the Foyer")
       printNow("The door suddenly locks behind you. You must now find a way out.")
-      go = Run()
+      Run()
 
 
 

@@ -1,3 +1,5 @@
+from media import *
+from game import *
 class Run:
     # Run constructor below initializes Run class and its functions
     # Run class basically handles the player's input once entered
@@ -7,7 +9,7 @@ class Run:
                            "east": 2, "e": 2, "west": 3, "w": 3}
         self.searchTerms = {"chest": 0, "bookcase": 0, "cabinets": 0, "dresser": 0, "room": 1}
 
-        self.myGame = Game()
+        #self.myGame = Game()
         self.user_Input = ""
         while self.user_Input != "exit":
             self.user_Input = requestString("What you would like to do:")

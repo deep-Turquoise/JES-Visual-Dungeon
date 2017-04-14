@@ -1,3 +1,5 @@
+from media import *
+from room import *
 class Game:
     def __init__(self):  # Game constructor initializes Game class and its functions
         # Make rooms
@@ -113,8 +115,7 @@ class Game:
         self.secretRoom.setChest(self.chest4)
         self.bedroom.setChest(self.chest5)
 
-    def getDoorforDir(self,
-                      direction):  # this function retrieves the door in either the North, South, East, or West direction
+    def getDoorforDir(self,direction):  # this function retrieves the door in either the North, South, East, or West direction
         currentRoom = self.player.getRoom()
         if direction == 0:
             door = currentRoom.getNorth()

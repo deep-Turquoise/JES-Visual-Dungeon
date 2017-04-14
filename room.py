@@ -1,3 +1,4 @@
+from media import *
 class Room:
     def __init__(self, num):                                    #Room constructor initializes the Room class and its functions
         self.number = num

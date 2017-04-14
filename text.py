@@ -1,3 +1,4 @@
+from media import *
 class Text():
     def __init__(self):
         None

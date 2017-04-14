@@ -1,3 +1,4 @@
+from media import *
 class Image:
   def __init__(self):
     self.startingMap    = makePicture(startingMap.jpg)
