@@ -3,10 +3,12 @@ from room import *
 from key import *
 from player import *
 from chest import *
+from map import *
 
 class Game:
     def __init__(self):  # Game constructor initializes Game class and its functions
         # Make rooms
+        self.map = Map()
         self.rooms = []
         self.foyer = Room(1)
         self.foyer.setName("Foyer")
