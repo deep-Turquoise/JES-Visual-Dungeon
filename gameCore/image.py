@@ -5,9 +5,8 @@ class Image:
     self.fullNormal  = makePicture(images/fullNormal.jpg)
     self.fullVisited = makePicture(images/fullVisited.jpg)
     show(self.startingMap)
-  def moveRooms( old, new):
-    None
 
+  def moveRooms( old, new):
   # this function copies a section from one of the 'full maps' to the startingMap
   # ul = upper left a tuple (x,y) for the starting position to copy
   # br = bottom right, a tuple (x,y) for the ending position of copy
