@@ -4,10 +4,13 @@ class Player:
         self.item = None
         self.location = room
         self.name = requestString("Please enter your name.")
+        showInformation("Hello " + self.name + " enjoy your stay...")
+        printNow("Hello " + self.name + " enjoy your stay...")
 
     def addItem(self, item):  # this function adds a new item to the player's inventory
         self.item = item
         printNow("You now have the" + item.getName())
+        showInformation("You now have the" + item.getName())
 
     def getItem(self):  # this function retrieves the player's item
         return self.item
@@ -18,8 +21,10 @@ class Player:
     def getItemList(self):  # this function retrieves and returns the list of player's items (if any)
         if not item:
             printNow("You have no items")
+            showInformation("You have no items")
         else:
             printNow("You hold a " + item.getName())
+            showInformation("You hold a " + item.getName())
 
     def setRoom(self, x):  # this function sets the player in x location (room)
         self.location = x
