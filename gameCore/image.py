@@ -1,9 +1,9 @@
 from image import *
 class Image:
   def __init__(self):
-    self.startingMap    = makePicture(startingMap.jpg)
-    self.fullNormal  = makePicture(fullNormal.jpg)
-    self.fullVisited = makePicture(fullVisited.jpg)
+    self.startingMap    = makePicture(images/startingMap.jpg)
+    self.fullNormal  = makePicture(images/fullNormal.jpg)
+    self.fullVisited = makePicture(images/fullVisited.jpg)
     show(self.startingMap)
   def moveRooms( old, new):
     None
