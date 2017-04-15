@@ -39,13 +39,13 @@ class Run:
             self.user_Input = self.user_Input or ""
             self.user_Input = self.user_Input.lower()
             if self.user_Input == "exit":
-                printNow("You remain trapped forever and die of starvation, but not before eating your own limbs...")
+                showInformation("You remain trapped forever and die of starvation, but not before eating your own limbs...")
             elif self.user_Input == "inventory":
                 self.myGame.getPlayer().getItemList()
             elif self.user_Input == "help":
                 help()
             elif self.user_Input == "scream":
-                printNow("You screamed. Didn't do anything since you're alone.")
+                showInformation("You screamed. Didn't do anything since you're alone.")
             elif self.user_Input == "inventory":
                 self.myGame.printInventory()
             else:
@@ -71,8 +71,8 @@ class Run:
                     if dir in self.directions.keys():
                         self.myGame.unlock(self.directions[dir])
                     else:
-                        printNow("I did not understand that direction.")
+                        showInformation("I did not understand that direction.")
                 # error Handing
                 else:
-                    printNow("You entered someting wrong. Try again.")
+                    showInformation("You entered someting wrong. Try again.")
                     self.moves -= 1
