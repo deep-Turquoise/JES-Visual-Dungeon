@@ -24,6 +24,6 @@ class Text:
     search <location> - Search a room or bookcase etc. e.g. search Bookcase
     take <item> - Take an item e.g. take key
     unlock <direction> - Unlock the door in the specified direction e.g. unlock w
-        """)
+    """
     printNow(info)
     showInformation(info)
