@@ -13,7 +13,7 @@ class Text:
     showInformation(info)
 
   def help(self):  # this function lists the possible commands a player can enter
-    printNow("""
+    showInformation("""
     Type one of these commands:
     exit - to exit the program
     help - to list the commands you need
