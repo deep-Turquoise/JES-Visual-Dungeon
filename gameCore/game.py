@@ -173,6 +173,7 @@ class Game:
                 printNow("You are still in the " + self.player.getRoom().getName())
             else:
                 newRoom = door.getOtherRoom(currentRoom)
+                self.map.moveRooms(currentRoom, newRoom)
                 self.player.setRoom(newRoom)
                 printNow("You have entered the " + self.player.getRoom().getName())
         else:

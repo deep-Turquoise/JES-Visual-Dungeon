@@ -15,7 +15,7 @@ class Room:
         self.upperLeft = ul
         self.lowerRigt = lr
     def getULLR(self):
-        return( (upperLeft, lowerRight) )                 #this function returns a tuple containing 2 tuples for the redraw corners
+        return( (self.upperLeft, self.lowerRight) )                 #this function returns a tuple containing 2 tuples for the redraw corners
     def search(self):                                           #this function searches
         printNow(description)
     def setName(self, n):                                       #this function sets the name of a room created by the game
