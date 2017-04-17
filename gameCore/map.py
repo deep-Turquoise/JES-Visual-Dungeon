@@ -2,22 +2,21 @@ from image import *
 from media import *
 class Map:
   def __init__(self):
-    self.startingMap    = makePicture("images/startingMap.jpg")
-    self.fullNormal  = makePicture("images/fullNormal.jpg")
-    self.fullVisited = makePicture("images/fullVisited.jpg")
+    self.startingMap    = makePicture("images/startingMap.png")
+    self.fullNormal  = makePicture("images/fullNormal.png")
+    self.fullVisited = makePicture("images/fullVisited.png")
     show(self.startingMap)
 
-  def pyCopy(self, ul, br, current):
-    for x in range (ul[0], br[0] - ul[0]):
-      for y in range (ul[1], br[1] - ul[1]):
+  def pyCopy(self, ul, lr, current):
+    for x in range (ul[0], lr[0]):
+      for y in range (ul[1], lr[1]):
         if current:
-          foreground = self.fullVisited
+          p = getPixel(self.fullVisited, x, y)
         else:
-          foreground = self.fullNormal
+          p = getPixel(self.fullNormal, x, y)
 
-        p = getPixel(foreground, x, y)
         color = getColor(p)
-        setColor(getPixel(self.startingMap, x , y , color))
+        setColor(getPixel(self.startingMap, x , y), color)
 
   # this function copies a section from one of the 'full maps' to the startingMap
   # ul = upper left a tuple (x,y) for the starting position to copy

@@ -5,15 +5,13 @@ class Room:
         self.name = ""
         self.description = ""
         self.chest = None
-        self.upperLeft = None
-        self.lowerRight = None
         self.n = None
         self.s = None
         self.e = None
         self.w = None
     def setULLR(self, ul, lr):    #this function sets the upper left and lower rigt for rom redraws, it takes 2 tuples as an argument
         self.upperLeft = ul
-        self.lowerRigt = lr
+        self.lowerRight = lr
     def getULLR(self):
         return( (self.upperLeft, self.lowerRight) )                 #this function returns a tuple containing 2 tuples for the redraw corners
     def search(self):                                           #this function searches
