@@ -12,6 +12,7 @@ class Run:
         self.myGame = Game()
         self.user_Input = ""
         while self.user_Input != "exit":
+            self.myGame.getMap().setNumbers(0,1) #todo nate has to make this actually put the rigt numbers
             self.user_Input = requestString("What you would like to do:")
             if self.moves == 3:
                 showInformation("Your stomache growls, you realize you haven't eaten in days...")

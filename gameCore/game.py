@@ -8,7 +8,7 @@ from map import *
 class Game:
     def __init__(self):  # Game constructor initializes Game class and its functions
         # Make rooms
-        self.map = Map()
+        self.map = Map(7,5)
         self.rooms = []
         self.foyer = Room(1)
         self.foyer.setULLR( (361, 450), (474, 510) )
@@ -130,6 +130,7 @@ class Game:
         self.secretRoom.setChest(self.chest4)
         self.bedroom.setChest(self.chest5)
 
+
     def getDoorforDir(self,direction):  # this function retrieves the door in either the North, South, East, or West direction
         currentRoom = self.player.getRoom()
         if direction == 0:
@@ -195,6 +196,9 @@ class Game:
 
     def getPlayer(self):  # this function returns the player created in the program
         return self.player
+
+    def getMap(self):
+        return self.map
 
     def takeItem(self):  # this function allows the player to take an item if present in a chest
         chest = self.player.getRoom().getChest()
