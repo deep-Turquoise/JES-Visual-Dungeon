@@ -38,8 +38,7 @@ class Game:
         self.backCorridor = Room(6)
         self.backCorridor.setULLR( (236, 212), (406, 319) )
         self.backCorridor.setName("Back Corridor")
-        self.backCorridor.setDescription(
-            "There are bloody handprints on the wall. There is some red light coming from a small crack on the west wall.")
+        self.backCorridor.setDescription("There are bloody handprints on the wall. There is some red light coming from a small crack on the west wall.")
         self.rooms.append(self.backCorridor)
         self.bedroom = Room(8)
         self.bedroom.setULLR( (258, 92), (387, 199) )

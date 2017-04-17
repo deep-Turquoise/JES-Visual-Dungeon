@@ -29,8 +29,7 @@ class Run:
             if self.moves == 72:
                 showInformation("You move very slow, and continue to chew on your bloody fingers")
             if self.moves == 73:
-                showInformation(
-                    "You stumble, and realize you've eaten your fingers, you can no longer stand, but crawl")
+                showInformation("You stumble, and realize you've eaten your fingers, you can no longer stand, but crawl")
             if self.moves == 74:
                 showInformation("You see visions of food heaven, and lay motionless while eating your limbs...")
             if self.moves >= 75:
