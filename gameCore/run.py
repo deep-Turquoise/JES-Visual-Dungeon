@@ -7,7 +7,7 @@ class Run:
         self.moves = 0
         self.directions = {"north": 0, "n": 0, "south": 1, "s": 1,
                            "east": 2, "e": 2, "west": 3, "w": 3}
-        self.searchTerms = {"chest": 0, "bookcase": 0, "cabinets": 0, "dresser": 0, "room": 1}
+        self.searchTerms = {"chest": 0, "bookcase": 0, "cabinet": 0, "dresser": 0, "room": 1}
 
         self.myGame = Game()
         self.user_Input = ""

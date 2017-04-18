@@ -20,7 +20,7 @@ def main():
   myText = Text()                                         #this function prompts the player upon initialization of the game
   myText.intro_Outputs()
   myText.help()
-  printNow("We are having you start off at the Foyer")
+  printNow("You are in the foyer")
   printNow("The door suddenly locks behind you. You must now find a way out.")
   Run()
 
