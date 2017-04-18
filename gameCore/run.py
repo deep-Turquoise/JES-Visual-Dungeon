@@ -1,5 +1,6 @@
 from media import *
 from game import *
+from text import *
 class Run:
     # Run constructor below initializes Run class and its functions
     # Run class basically handles the player's input once entered
@@ -11,6 +12,7 @@ class Run:
 
         self.myGame = Game()
         self.user_Input = ""
+        self.myText = Text()
         while self.user_Input != "exit":
             self.myGame.getMap().setNumbers(0,1) #todo nate has to make this actually put the rigt numbers
             self.user_Input = requestString("What you would like to do:")
@@ -43,7 +45,7 @@ class Run:
             elif self.user_Input == "inventory":
                 self.myGame.getPlayer().getItemList()
             elif self.user_Input == "help":
-                help()
+                self.myText.help()
             elif self.user_Input == "scream":
                 showInformation("You screamed. Didn't do anything since you're alone.")
             elif self.user_Input == "inventory":

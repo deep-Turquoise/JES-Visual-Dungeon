@@ -19,12 +19,12 @@ class Player:
         self.item = None
 
     def getItemList(self):  # this function retrieves and returns the list of player's items (if any)
-        if not item:
+        if not self.item:
             printNow("You have no items")
             showInformation("You have no items")
         else:
-            printNow("You hold a " + item.getName())
-            showInformation("You hold a " + item.getName())
+            printNow("You hold a " + self.item.getName())
+            showInformation("You hold a " + self.item.getName())
 
     def setRoom(self, x):  # this function sets the player in x location (room)
         self.location = x
