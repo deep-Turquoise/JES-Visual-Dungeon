@@ -1,7 +1,7 @@
 #Silicon Beach Software
 #Lab 13 redo of lab 12
 #David Henderson
-#Chris Calderon
+#Christopher Calderon
 #Nicholas Nelson
 #Nathan Muaga
 #Haley Dimapilis
