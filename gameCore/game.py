@@ -11,6 +11,7 @@ class Game:
         self.map = Map(7,5)
         self.rooms = []
         self.foyer = Room(1)
+        self.foyer.setSound("sounds/foyer.wav")
         self.foyer.setULLR( (358, 502), (496, 588) )
         self.foyer.setName("Foyer")
         self.foyer.setDescription("It is very dark. You can barely make out what is ahead")
@@ -180,6 +181,8 @@ class Game:
                 showInformation("This door is locked, you need to find a key to open it." + "\n" + "You are still in the " + self.player.getRoom().getName())
             else:
                 newRoom = door.getOtherRoom(currentRoom)
+                currentRoom.stopSound()
+                newRoom.startSound()
                 self.map.moveRooms(currentRoom, newRoom)
                 self.player.setRoom(newRoom)
                 printNow("You have entered the " + self.player.getRoom().getName())

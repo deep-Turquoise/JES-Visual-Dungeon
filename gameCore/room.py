@@ -73,6 +73,12 @@ class Room:
         return self.chest
     def setChest(self, chest):                       #this function creates and sets a chest in a room
         self.chest = chest
+    def setSound(self, filename):
+        self.mySound = makeSound(filename)
+    def startSound(self):
+        play(self.mySound)
+    def stopSound(self):
+        stopPlaying(self.mySound)
 
 
 class Door:
