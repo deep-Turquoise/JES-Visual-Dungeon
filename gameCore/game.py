@@ -12,48 +12,66 @@ class Game:
         self.rooms = []
         self.foyer = Room(1)
         self.foyer.setSound("sounds/foyer.wav")
+        self.foyer.startSound()
         self.foyer.setULLR( (358, 502), (496, 588) )
         self.foyer.setName("Foyer")
         self.foyer.setDescription("It is very dark. You can barely make out what is ahead")
         self.rooms.append(self.foyer)
+
         self.frontHall = Room(2)
+        self.frontHall.setSound("sounds/fronthall.wav")
         self.frontHall.setULLR( (382, 336), (472, 509) )
         self.frontHall.setName("Front Hall")
         self.frontHall.setDescription("There doesn't seem to be anyone around.")
         self.rooms.append(self.frontHall)
+
         self.livingRoom = Room(3)
+        self.livingRoom.setSound("sounds/livingroom.wav")
         self.livingRoom.setULLR( (217, 337), (390, 509) )
         self.livingRoom.setName("Living Room")
         self.livingRoom.setDescription("There is blood on the chair.")
         self.rooms.append(self.livingRoom)
+
         self.kitchen = Room(4)
+        self.kitchen.setSound("sounds/kitchen.wav")
         self.kitchen.setULLR( (465, 336), (733, 509) )
         self.kitchen.setName("Kitchen")
         self.kitchen.setDescription("It reaks in here. All the food is spoiled and there is either blood or ketchup everywhere.")
         self.rooms.append(self.kitchen)
+
         self.den = Room(5)
+        self.den.setSound("sounds/den.wav")
         self.den.setULLR( (424, 171), (733, 343) )
         self.den.setName("Dining Room") #Changed to from "Den"
         self.den.setDescription("It looks like there where was a scuffle in here.")
         self.rooms.append(self.den)
+
         self.backCorridor = Room(6)
+        self.backCorridor.setSound("sounds/backcorridor.wav")
         self.backCorridor.setULLR( (217, 171), (431, 343) )
         self.backCorridor.setName("Den") #Changed from "Back Corridor"
         self.backCorridor.setDescription("TV is still on. There is some red light coming from a small crack on the west wall.")
         self.rooms.append(self.backCorridor)
+
         self.bedroom = Room(8)
+        self.bedroom.setSound("sounds/bedroom.wav")
         self.bedroom.setULLR( (217, 9), (390, 178) )
         self.bedroom.setName("Bedroom")
         self.bedroom.setDescription("It's going to take a lot of bleach to get that blood off.")
         self.rooms.append(self.bedroom)
+
         self.secretRoom = Room(7)
+        self.secretRoom.setSound("sounds/secretroom.wav")
         self.secretRoom.setULLR( (54, 170), (224, 343) )
         self.secretRoom.setName("Secret Room")
         self.secretRoom.setDescription("It has become very clear why this room is hidden.")
         self.rooms.append(self.secretRoom)
+
         self.out = Room(9)
+        self.out.setSound("sounds/success.wav")
         self.out.setULLR( (301, 529), (529, 588) )
         self.rooms.append(self.out)
+
         self.out.setName("Front Yard!")
         self.out.setDescription("You got out, you win!")
 
@@ -156,7 +174,7 @@ class Game:
         key = self.player.getItem()
         if not key:
             printNow("You don't have a key!")
-            showInformation()"You don't have a key!"
+            showInformation("You don't have a key!")
             return
         if key.getDoor().getNumber() == door.getNumber():
             door.setLocked(False)
