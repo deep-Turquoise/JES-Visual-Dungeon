@@ -69,7 +69,7 @@ class Game:
 
         self.out = Room(9)
         self.out.setSound("sounds/success.wav")
-        self.out.setULLR( (301, 529), (529, 588) )
+        self.out.setULLR( (0, 343), (224, 590) )
         self.rooms.append(self.out)
 
         self.out.setName("Front Yard!")
