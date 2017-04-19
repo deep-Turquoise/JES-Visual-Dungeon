@@ -29,23 +29,28 @@ class Room:
           if self.n.getLocked():
             str = "locked "
           printNow("There is a " + str +" door to the north.")
+          showInformation("There is a " + str +" door to the north.")
         if self.s and not self.s.getHidden():
           str = ""
           if self.s.getLocked():
             str = "locked "
           printNow("There is a " + str +" door to the south.")
+          showInformation("There is a " + str +" door to the south.")
         if self.e and not self.e.getHidden():
           str = ""
           if self.e.getLocked():
             str = "locked "
           printNow("There is a " + str +" door to the east.")
+          showInformation("There is a " + str +" door to the east.")
         if self.w and not self.w.getHidden():
           str = ""
           if self.w.getLocked():
             str = "locked "
           printNow("There is a " + str +" door to the west.")
+          showInformation("There is a " + str +" door to the west.")
         if self.chest:
           printNow("There is a " + self.chest.getName() + " In the corner")
+          showInformation("There is a " + self.chest.getName() + " In the corner")
     def getNumber(self):                             #this function retrieves the room's unique number
         return self.number
     def setNorth(self, room):                        #this function sets the room in the North direction
@@ -90,8 +95,10 @@ class Door:
       printNow(self.description)
       if locked:
          printNow("The door is locked")
+         showInformation("The door is locked")
       else:
          printNow("The door is not locked")
+         showInformation("The door is not locked")
   def getOtherRoom(self, room):                               #this function retrieves the room in the direction input by user
       if self.connects[0].getNumber() == room.getNumber():
           return self.connects[1]

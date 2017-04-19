@@ -146,20 +146,25 @@ class Game:
         door = self.getDoorforDir(direction)
         if not door:
             printNow("There is no door in that direction.")
+            showInformation("There is no door in that direction.")
             return
         if not door.getLocked():
             printNow("This door isn't locked.")
+            showInformation("This door isn't locked.")
             return
         key = self.player.getItem()
         if not key:
             printNow("You don't have a key!")
+            showInformation()"You don't have a key!"
             return
         if key.getDoor().getNumber() == door.getNumber():
             door.setLocked(False)
             self.player.useItem()
             printNow("The door unlocks...")
+            showInformation("The door unlocks...")
         else:
             printNow("This key doesn't work for this door.")
+            showInformation("This key doesn't work for this door.")
 
     def move(self, direction):  # this function moves the player into new room if it is possible
         currentRoom = self.player.getRoom()
@@ -167,10 +172,12 @@ class Game:
         if door:
             if door.getHidden():
                 printNow("You found a door here!")
+                showInformation("You found a door here!")
                 door.setHidden(False)
             if door.getLocked():
                 printNow("This door is locked, you need to find a key to open it.")
                 printNow("You are still in the " + self.player.getRoom().getName())
+                showInformation("This door is locked, you need to find a key to open it." + "\n" + "You are still in the " + self.player.getRoom().getName())
             else:
                 newRoom = door.getOtherRoom(currentRoom)
                 self.map.moveRooms(currentRoom, newRoom)
@@ -179,6 +186,7 @@ class Game:
         else:
             printNow("You hit your face on a wall. Ouch!")
             printNow("You are still in the " + self.player.getRoom().getName())
+            showInformation("You hit your face on a wall. Ouch!" + "\n" + "You are still in the " + self.player.getRoom().getName())
 
     def search(self, loc, thing):  # this function allows the player to search
         if loc == 0:  # and see if there is anything in the room they're in
@@ -187,6 +195,7 @@ class Game:
                 theChest.printDescription()
             else:
                 printNow("There is no " + thing + " in this room")
+                showInformation("There is no " + thing + " in this room")
         else:
             self.player.getRoom().printDescription()
 
@@ -207,5 +216,7 @@ class Game:
                 self.player.addItem(item)
             else:
                 printNow("The " + chest.getName() + " is empty.")
+                showInformation("The " + chest.getName() + " is empty.")
         else:
             printNow("The room has no items to take.")
+            showInformation("The room has no items to take.")

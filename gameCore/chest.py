@@ -31,5 +31,7 @@ class Chest:
     def printDescription(self):  # this function describes the type of chest (if any) existing in a room
         if self.item:
             printNow("You find a " + self.item.getName() + " in the " + self.name + ".")
+            showInformation("You find a " + self.item.getName() + " in the " + self.name + ".")
         else:
             printNow("The " + self.name + " is empty.")
+            showInformation("The " + self.name + " is empty.")
