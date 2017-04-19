@@ -178,6 +178,7 @@ class Game:
             return
         if key.getDoor().getNumber() == door.getNumber():
             door.setLocked(False)
+            door.setHidden(False)
             self.player.useItem()
             unlock = makeSound("sounds/unlock.wav")
             play(unlock)

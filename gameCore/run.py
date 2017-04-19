@@ -14,9 +14,10 @@ class Run:
         self.user_Input = ""
         self.myText = Text()
         while self.user_Input != "exit":
-            a = (74 - self.moves) / 10
-            b = (74 - self.moves) % 10
+            a = (76 - self.moves) / 10
+            b = (76 - self.moves) % 10
             self.myGame.getMap().setNumbers(a,b)
+
             self.user_Input = requestString("What you would like to do:")
             if self.moves == 3:
                 showInformation("Your stomache growls, you realize you haven't eaten in days...")
@@ -82,3 +83,4 @@ class Run:
                 else:
                     showInformation("You entered someting wrong. Try again.")
                     self.moves -= 1
+

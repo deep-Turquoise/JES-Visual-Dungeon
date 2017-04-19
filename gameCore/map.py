@@ -35,6 +35,7 @@ class Map:
     self.pyCopy((650,55),(755,105), True)
     self.pyCopyScreen(left,  ( 655,55 ) )
     self.pyCopyScreen(right, ( 705,55) )
+    repaint(self.startingMap)
 
   def pyCopy(self, ul, lr, current):
     for x in range (ul[0], lr[0]):
