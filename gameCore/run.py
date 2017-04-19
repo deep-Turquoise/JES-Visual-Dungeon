@@ -47,6 +47,8 @@ class Run:
             elif self.user_Input == "help":
                 self.myText.help()
             elif self.user_Input == "scream":
+                scream = makeSound("sounds/scream.wav")
+                play(scream)
                 showInformation("You screamed. Didn't do anything since you're alone.")
             elif self.user_Input == "inventory":
                 self.myGame.printInventory()
