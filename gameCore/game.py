@@ -196,7 +196,7 @@ class Game:
                 showInformation("You found a door here!")
                 door.setHidden(False)
             if door.getLocked():
-                lock = makeSound("sounds/lock.wav")
+                lock = makeSound("sounds/locked.wav")
                 play(lock)
                 printNow("This door is locked, you need to find a key to open it.")
                 printNow("You are still in the " + self.player.getRoom().getName())
