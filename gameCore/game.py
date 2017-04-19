@@ -179,6 +179,8 @@ class Game:
         if key.getDoor().getNumber() == door.getNumber():
             door.setLocked(False)
             self.player.useItem()
+            unlock = makeSound("sounds/unlock.wav")
+            play(unlock)
             printNow("The door unlocks...")
             showInformation("The door unlocks...")
         else:
@@ -194,6 +196,8 @@ class Game:
                 showInformation("You found a door here!")
                 door.setHidden(False)
             if door.getLocked():
+                lock = makeSound("sounds/lock.wav")
+                play(lock)
                 printNow("This door is locked, you need to find a key to open it.")
                 printNow("You are still in the " + self.player.getRoom().getName())
                 showInformation("This door is locked, you need to find a key to open it." + "\n" + "You are still in the " + self.player.getRoom().getName())
