@@ -115,6 +115,12 @@ class Game:
         self.door9.setLocked(True)
         self.foyer.setSouth(self.door9)
 
+        #set some bogus doors just so you won't hit your head outside
+        self.out.setNorth(self.door1)
+        self.out.setEast(self.door1)
+        self.out.setWest(self.door1)
+        self.out.setSouth(self.door1)
+
         # Make player
         self.player = Player(self.foyer)
         # Make chests
