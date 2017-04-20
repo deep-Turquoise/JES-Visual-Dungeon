@@ -69,11 +69,7 @@ class Game:
 
         self.out = Room(9)
         self.out.setSound("sounds/success.wav")
-<<<<<<< HEAD
-        self.out.setULLR( (0, 343), (224, 590) )
-=======
         self.out.setULLR((0, 343), (224, 590))
->>>>>>> ui-branch
         self.rooms.append(self.out)
 
         self.out.setName("Front Yard!")
