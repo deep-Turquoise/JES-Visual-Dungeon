@@ -69,7 +69,11 @@ class Game:
 
         self.out = Room(9)
         self.out.setSound("sounds/success.wav")
+<<<<<<< HEAD
         self.out.setULLR( (0, 343), (224, 590) )
+=======
+        self.out.setULLR((0, 343), (224, 590))
+>>>>>>> ui-branch
         self.rooms.append(self.out)
 
         self.out.setName("Front Yard!")
@@ -114,6 +118,12 @@ class Game:
         self.door9 = Door((self.foyer, self.out), 9)
         self.door9.setLocked(True)
         self.foyer.setSouth(self.door9)
+
+        #set some bogus doors just so you won't hit your head outside
+        self.out.setNorth(self.door1)
+        self.out.setEast(self.door1)
+        self.out.setWest(self.door1)
+        self.out.setSouth(self.door1)
 
         # Make player
         self.player = Player(self.foyer)
